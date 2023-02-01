@@ -4,6 +4,7 @@ plugins {
     id 'kotlin-kapt'
     id 'com.google.dagger.hilt.android'
     id 'androidx.navigation.safeargs.kotlin'
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -50,8 +51,8 @@ android {
 
 dependencies {
     implementation 'androidx.core:core-ktx:1.9.0'
-    implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
@@ -61,21 +62,21 @@ dependencies {
     implementation "androidx.coordinatorlayout:coordinatorlayout:1.2.0"
 
     // Material Components
-    implementation 'com.google.android.material:material:1.8.0-rc01'
+    implementation 'com.google.android.material:material:1.9.0-alpha01'
 
     // Navigation Component
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
 
     // Room components
-    implementation "androidx.room:room-runtime:2.4.3"
-    kapt "androidx.room:room-compiler:2.4.3"
-    implementation "androidx.room:room-ktx:2.4.3"
-    androidTestImplementation "androidx.room:room-testing:2.4.3"
+    implementation "androidx.room:room-runtime:2.5.0"
+    kapt "androidx.room:room-compiler:2.5.0"
+    implementation "androidx.room:room-ktx:2.5.0"
+    androidTestImplementation "androidx.room:room-testing:2.5.0"
 
     // Data binding
     kapt "com.android.databinding:compiler:3.2.0-alpha10"
-    kapt "androidx.databinding:databinding-common:7.3.1"
+    kapt "androidx.databinding:databinding-common:7.4.0"
 
     // DataStore
     implementation "androidx.datastore:datastore-preferences:1.1.0-alpha01"
@@ -88,7 +89,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 
     //Dagger - Hilt
-    implementation "com.google.dagger:hilt-android:2.44"
+    implementation "com.google.dagger:hilt-android:2.44.2"
     kapt "com.google.dagger:hilt-android-compiler:2.44"
 
     kapt "androidx.hilt:hilt-compiler:1.0.0"
@@ -107,14 +108,13 @@ dependencies {
     implementation "io.coil-kt:coil:0.13.0"
 
     // Gson
-    implementation 'com.google.code.gson:gson:2.10'
+    implementation 'com.google.code.gson:gson:2.10.1'
 
     // Shimmer
     implementation 'com.facebook.shimmer:shimmer:0.5.0'
     implementation 'com.todkars:shimmer-recyclerview:0.4.1'
     // Jsoup
-    implementation 'org.jsoup:jsoup:1.13.1'
-
+    implementation 'org.jsoup:jsoup:1.15.3'
     // DataStore
     implementation "androidx.datastore:datastore-preferences:1.0.0"
 }
