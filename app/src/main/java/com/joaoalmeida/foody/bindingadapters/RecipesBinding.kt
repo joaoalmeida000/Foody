@@ -15,7 +15,7 @@ import com.joaoalmeida.foody.util.NetworkResult
 
 class RecipesBinding {
 
-    companion object {
+    companion object RecipesBinding{
 
         @BindingAdapter("onRecipeClickListener")
         @JvmStatic

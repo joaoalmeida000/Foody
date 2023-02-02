@@ -2,7 +2,10 @@ package com.joaoalmeida.foody.util
 
 object Constants {
     const val BASE_URL = "https://api.spoonacular.com"
+    const val BASE_IMAGE_URL = "https://spoonacular.com/cdn/ingredients_100x100/"
     const val API_KEY = "099b9e9700c1438f994f6cb0e73fdaa7"
+
+    const val RECIPE_RESULT_KEY = "recipeBundle"
 
     const val QUERY_SEARCH = "query"
     const val QUERY_NUMBER = "number"

@@ -31,10 +31,9 @@ class RecipesAdapter : RecyclerView.Adapter<RecipesAdapter.MyViewHolder>() {
         val diffUtilResult = DiffUtil.calculateDiff(recipesDiffUtil)
         recipeList = newData.results
         diffUtilResult.dispatchUpdatesTo(this)
-
     }
 
-    class MyViewHolder(val binding: RecipesRowLayoutBinding) :
+    class MyViewHolder(private val binding: RecipesRowLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(result: Result) {
             binding.result = result

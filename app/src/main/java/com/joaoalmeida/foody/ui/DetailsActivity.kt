@@ -10,8 +10,8 @@ import com.google.android.material.tabs.TabLayoutMediator
 import com.joaoalmeida.foody.R
 import com.joaoalmeida.foody.adapters.PagerAdapter
 import com.joaoalmeida.foody.databinding.ActivityDetailsBinding
-import com.joaoalmeida.foody.ui.fragments.recipes.detailedrecipe.IngredientsFragment
-import com.joaoalmeida.foody.ui.fragments.recipes.detailedrecipe.InstructionsFragment
+import com.joaoalmeida.foody.ui.fragments.ingredients.IngredientsFragment
+import com.joaoalmeida.foody.ui.fragments.instructions.InstructionsFragment
 import com.joaoalmeida.foody.ui.fragments.overview.OverviewFragment
 
 class DetailsActivity : AppCompatActivity() {

@@ -11,7 +11,7 @@ import org.jsoup.Jsoup
 
 class RecipesRowBinding {
 
-    companion object {
+    companion object RecipesRowBinding{
 
         @BindingAdapter("loadImageFromUrl")
         @JvmStatic
