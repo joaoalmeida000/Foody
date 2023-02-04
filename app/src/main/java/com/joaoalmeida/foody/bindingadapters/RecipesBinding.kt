@@ -7,9 +7,8 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.databinding.BindingAdapter
 import androidx.navigation.findNavController
-import com.joaoalmeida.foody.data.database.RecipesEntity
+import com.joaoalmeida.foody.data.database.entities.RecipesEntity
 import com.joaoalmeida.foody.models.FoodRecipe
-import com.joaoalmeida.foody.ui.fragments.recipes.RecipesFragment
 import com.joaoalmeida.foody.ui.fragments.recipes.RecipesFragmentDirections
 import com.joaoalmeida.foody.util.NetworkResult
 

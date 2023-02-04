@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
-            name="result"
-            type="com.joaoalmeida.foody.models.Result" />
+            name="favoritesEntity"
+            type="com.joaoalmeida.foody.data.database.entities.FavoritesEntity" />
+        
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/recipesRowLayout"
-        onRecipeClickListener="@{result}"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -35,8 +36,8 @@
                 android:background="@color/white">
 
                 <ImageView
+                    loadImageFromUrl="@{favoritesEntity.result.image}"
                     android:id="@+id/favorite_recipe_imageView"
-                    loadImageFromUrl="@{result.image}"
                     android:layout_width="200dp"
                     android:layout_height="0dp"
                     android:scaleType="centerCrop"
@@ -55,7 +56,7 @@
                     android:ellipsize="end"
                     android:fontFamily="@font/courgette"
                     android:maxLines="2"
-                    android:text="@{result.title}"
+                    android:text="@{favoritesEntity.result.title}"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -64,8 +65,8 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
+                    android:text="@{favoritesEntity.result.summary}"
                     android:id="@+id/favorite_description_textView"
-                    parseHtml="@{result.summary}"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
@@ -90,8 +91,8 @@
                     app:tint="@color/red" />
 
                 <TextView
+                    setNumberOfLikes="@{favoritesEntity.result.aggregateLikes}"
                     android:id="@+id/favorite_heart_textView"
-                    setNumberOfLikes="@{result.aggregateLikes}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/red"
@@ -109,8 +110,8 @@
                     app:tint="@color/yellow" />
 
                 <TextView
+                    setNumberOfMinutes="@{favoritesEntity.result.readyInMinutes}"
                     android:id="@+id/favorite_clock_textView"
-                    setNumberOfMinutes="@{result.readyInMinutes}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
@@ -120,8 +121,8 @@
                     app:layout_constraintTop_toBottomOf="@+id/favorite_clock_imageView" />
 
                 <ImageView
+                    applyVeganColor="@{favoritesEntity.result.vegan}"
                     android:id="@+id/favorite_leaf_imageView"
-                    applyVeganColor="@{result.vegan}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintBottom_toTopOf="@+id/favorite_leaf_textView"
@@ -132,8 +133,8 @@
                     app:tint="@color/darkGray" />
 
                 <TextView
+                    applyVeganColor="@{favoritesEntity.result.vegan}"
                     android:id="@+id/favorite_leaf_textView"
-                    applyVeganColor="@{result.vegan}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
